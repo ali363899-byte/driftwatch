@@ -4,7 +4,7 @@ from pathlib import Path
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse
 ROOT=Path(__file__).resolve().parent
-MODE=ROOT.name
+MODE='driftwatch'
 if MODE=='atlas-evidence':
     from engine import EvidenceIndex, evaluate
     documents=json.loads((ROOT/'sample_documents.json').read_text(encoding='utf-8'))
